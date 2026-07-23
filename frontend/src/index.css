@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FDFBF7;
+    color: #1F1F1F;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-display-luxury {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #B89C7D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A5C45;
+}
+
+/* Glassmorphism Luxury Utilities */
+.glass-panel {
+  background: rgba(248, 245, 242, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(231, 222, 212, 0.6);
+}
+
+.glass-dark {
+  background: rgba(45, 42, 40, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 156, 125, 0.2);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #7A5C45 0%, #B89C7D 50%, #7A5C45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-light {
+  background: linear-gradient(135deg, #F8F5F2 0%, #E7DED4 50%, #B89C7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer animation for luxury loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(231, 222, 212, 0.3) 0%, rgba(248, 245, 242, 0.8) 50%, rgba(231, 222, 212, 0.3) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* Custom Cursor Effect Support */
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+}
